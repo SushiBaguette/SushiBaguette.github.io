@@ -36,7 +36,7 @@ jobs:
         with:
           python-version: '3.13'
       - name: Update Indexes
-        run: python ./.scripts/update_indexes_ci.py
+        run: python ./.scripts/update_indexes_ci.py -w .
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Upload artifact
