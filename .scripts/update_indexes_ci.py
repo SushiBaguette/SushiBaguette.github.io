@@ -8,6 +8,8 @@ parser.add_argument("-w", "--workspace", type=str)
 args = parser.parse_args()
 workspace_root = args.workspace
 
+print(workspace_root)
+
 blog_folder_path = os.path.join(workspace_root, "blog")
 top_level_index_path = os.path.join(workspace_root, "blog", "index.html")
 
@@ -18,5 +20,8 @@ for entry in os.scandir(blog_folder_path):
         latest_month_dir = max(latest_month_dir, os.path.abspath(entry.path))
 
 latest_month_index_path = os.path.join(latest_month_dir, "index.html")
+
+print(latest_month_index_path)
+print(top_level_index_path)
 
 shutil.copyfile(latest_month_index_path, top_level_index_path)
