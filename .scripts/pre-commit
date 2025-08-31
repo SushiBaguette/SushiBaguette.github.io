@@ -1,0 +1,4 @@
+#!/bin/sh
+# Just for reference, this is an excessively local dev solution. I plan to do this with a github action later
+py ./.scripts/update_indexes.py
+git add *
